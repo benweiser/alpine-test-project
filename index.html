@@ -1,0 +1,17 @@
+
+    <html>
+        <title>Alpine JS Test Project</title>
+        <body>
+            <div x-data="data()">
+            <h1 x-data="{ message: 'Alpine Test Project' }" x-text="message"></h1>
+            <button x-on:click="getData()">Fetch Data</button>
+            <div>
+                <div x-show="loading">Loading...</div>
+                <template x-for="person in data" :key="person.name">
+                    <div x-text="person.name"></div>
+                </template>
+            </div>
+        </div>
+            <script src="/index.js"></script>
+        </body>
+    </html>
